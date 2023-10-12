@@ -36,7 +36,7 @@ const displayPhones = (phones, dataLimit) => {
             <h5 class="card-title">Phone Name : ${phone.phone_name}</h5>
             <p class="card-text">
             This is a longer card with supporting text below as a natural
-            lead-in to additio nal content. This content is a little bit
+            lead-in to nal content. This content is a little bit
             longer.
             </p>
             <button onclick="loadPhoneDetails('${phone.slug}')" href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#phoneDetailModal">Show Details</button>
@@ -92,13 +92,13 @@ const loadPhoneDetails = async (id) => {
 const displayPhoneDetails = (phone) => {
   const modalTitle = document.getElementById("phoneDetailModalLabel");
   modalTitle.innerText = phone.name ? phone.name : "Not available";
-
   const phoneDetailsEl = document.getElementById("phone-details");
   phoneDetailsEl.innerHTML = `
-            <p>Release Date : ${phone.releaseDate ? phone.releaseDate : "No release date found"}</p>
-            <p>Storage : ${phone.mainFeatures ? phone.mainFeatures.storage : "No storage information"}</p>
-            <p>Others : ${phone.others ? phone.others.Bluetooth : "No Bluetooth information"}</p>
+        <p>Release Date : ${phone.releaseDate ? phone.releaseDate : "No release date found"}</p>
+        <p>Storage : ${phone.mainFeatures ? phone.mainFeatures.storage : "No storage information"}</p>
+        <p>Others : ${phone.others ? phone.others.Bluetooth : "No Bluetooth information"}</p>
     `;
 };
 
 loadPhones("apple");
+
